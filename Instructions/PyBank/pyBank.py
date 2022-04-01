@@ -14,18 +14,13 @@ with open(csv_path) as csvfile:
 
     print(csvreader)
 
-    # Read the header row first (skip this step if there is now header)
+    # Read the header row first
     csv_header = next(csvreader)
-
-    # Read each row of data after the header
-    #for row in csvreader:
-        #print(row)
-    
+  
     #initialize variables
     month_list = []
     profit_list = []
     profit_change_list = []
-    previous_amount = 0
 
     for line in csvreader:
         month_list.append(line[0])
