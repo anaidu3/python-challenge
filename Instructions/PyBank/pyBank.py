@@ -63,6 +63,18 @@ with open(csv_path) as csvfile:
     print(f"Financial Analysis \n---------------------")
     print(f"Total months: {months}") 
     print(f"Total: ${net_total_amount}")
-    print(f'Average change: ${average_profit_change}')
-    print(f'Greatest Increase in Profits: {greatest_increase_date} (${greatest_increase_amount})')
-    print(f'Greatest Decrease in Profits: {greatest_decrease_date} (${greatest_decrease_amount})')
+    print(f"Average change: ${average_profit_change}")
+    print(f"Greatest Increase in Profits: {greatest_increase_date} (${greatest_increase_amount})")
+    print(f"Greatest Decrease in Profits: {greatest_decrease_date} (${greatest_decrease_amount})")
+
+    #export a text file with the results.
+    output = (
+            f"Financial Analysis \n"
+            f"---------------------\n"
+            f"Total months: {months}\n"
+            f"Total: ${net_total_amount}\n"
+            f"Average change: ${average_profit_change}\n"
+            f"Greatest Increase in Profits: {greatest_increase_date} (${greatest_increase_amount})\n"
+            f"Greatest Decrease in Profits: {greatest_decrease_date} (${greatest_decrease_amount}\n")
+    with open('pyBank.txt','w') as f:
+        f.write(output)
