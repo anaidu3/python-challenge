@@ -42,13 +42,10 @@ with open(csv_path) as csvfile:
             continue
         else:
             unique_candidates.append(count[2])
-        
-    
-
 
 votes = len(ballot_list)
 set(unique_candidates)
-print(unique_candidates)
+#print(unique_candidates)
 
 stockham = len(stockham_list)
 degette = len(degette_list)

@@ -12,7 +12,7 @@ with open(csv_path) as csvfile:
     # CSV reader specifies delimiter and variable that holds contents
     csvreader = csv.reader(csvfile, delimiter=',')
 
-    print(csvreader)
+    #print(csvreader)
 
     # Read the header row first
     csv_header = next(csvreader)
@@ -71,5 +71,5 @@ with open(csv_path) as csvfile:
             f"Average change: ${average_profit_change}\n"
             f"Greatest Increase in Profits: {greatest_increase_date} (${greatest_increase_amount})\n"
             f"Greatest Decrease in Profits: {greatest_decrease_date} (${greatest_decrease_amount}\n")
-    with open('pyBank.txt','w') as f:
+    with open('PyBank.txt','w') as f:
         f.write(output)
